@@ -6,7 +6,7 @@ Interactive, self-contained executive analytics portal and counselor workspace b
 
 ## Overview
 
-- **Executive Portal (`index.html`)**:
+- **Main Executive Portal (`ksr_executive_dashboard.html`)**:
   - **7 Core Views**:
     1. **Executive Dashboard**: Company-wide KPIs, Lead Funnel, Source Distribution, Counselor Calling Performance, and Revenue & Collection Velocity.
     2. **Lead Analytics**: Stage breakdown, Workable vs. Junk quality ratio, conversion rates by course, and admissions by channel.
@@ -22,6 +22,7 @@ Interactive, self-contained executive analytics portal and counselor workspace b
   - 7 Personal KPI cards (Assigned Leads, Today's Fresh Leads, Uncalled Queue, Follow-up Tasks, Calls Made, Connect Rate, Conversions & Revenue).
   - 4 Dynamic charts: Hourly Calling & Connect Rate, Pipeline Stage Donut, Course Inquiries & Admissions, and 30-Day Daily Trajectory.
   - Actionable Leads Queue table with status pills and instant name/course search.
+  - Direct 1-click navigation to the Executive Dashboard (`ksr_executive_dashboard.html`).
 
 ---
 
@@ -39,21 +40,21 @@ Interactive, self-contained executive analytics portal and counselor workspace b
 
 | File | Description |
 |---|---|
-| `index.html` | Primary standalone Executive Dashboard (ready to open in browser or deploy on GitHub Pages) |
-| `counselor_dashboard.html` | Standalone Counselor Workspace |
+| `ksr_executive_dashboard.html` | **Main File**: Complete Executive Intelligence Portal (all 7 views, bottom navigation) |
+| `counselor_dashboard.html` | Standalone Counselor Workspace with personal KPIs & live charts |
 | `dashboard_data.json` | Master consolidated structured database powering both dashboards |
-| `build_exact_dashboard.py` | Python build script for `index.html` |
+| `build_exact_dashboard.py` | Python build script for `ksr_executive_dashboard.html` |
 | `build_counselor_dashboard.py` | Python build script for `counselor_dashboard.html` |
 | `process_telecrm_data.py` | ETL pipeline extracting raw TeleCRM CSVs and journey logs into `dashboard_data.json` |
 | `README.md` | Documentation and architecture guide |
-| `.gitignore` | Ignores local caches and duplicate artifacts |
+| `.gitignore` | Excludes duplicates (`index.html`, `admin_dashboard.html`), raw data dumps, and caches |
 
 ---
 
 ## How to Run & Build
 
 1. **View Dashboards Directly**:
-   Double-click `index.html` or `counselor_dashboard.html` to open in any modern web browser. Both files are completely standalone and self-contained with no external server required.
+   Double-click `ksr_executive_dashboard.html` or `counselor_dashboard.html` to open in any modern web browser. Both files are completely standalone and self-contained with no external server required.
 
 2. **Re-process Data and Rebuild**:
    ```bash

@@ -13,9 +13,9 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Duplicate HTML files (index.html is the single primary standalone dashboard)
+# Duplicate / Secondary HTML files (ksr_executive_dashboard.html is the main executive file)
+index.html
 admin_dashboard.html
-ksr_executive_dashboard.html
 
 # Raw telecrm dump exports (all structured data is consolidated in dashboard_data.json)
 telecrm-activities*.csv

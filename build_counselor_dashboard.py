@@ -532,9 +532,9 @@ def generate_counselor_dashboard():
 
       <!-- Actions & Switchers -->
       <div class="header-actions">
-        <a href="index.html" class="btn-switch-admin">
-          <i class="fa-solid fa-user-shield"></i>
-          <span>Switch to Admin Portal</span>
+        <a href="ksr_executive_dashboard.html" class="btn-switch-admin">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Executive Dashboard &rarr;</span>
         </a>
       </div>
     </div>

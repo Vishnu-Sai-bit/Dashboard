@@ -4391,13 +4391,9 @@ def generate_live_dashboard():
 </body>
 </html>'''
 
-    with open('index.html', 'w', encoding='utf-8') as f:
-        f.write(html)
-    with open('admin_dashboard.html', 'w', encoding='utf-8') as f:
-        f.write(html)
     with open('ksr_executive_dashboard.html', 'w', encoding='utf-8') as f:
         f.write(html)
-    print("Successfully built index.html, admin_dashboard.html, and ksr_executive_dashboard.html with 100% Live TeleCRM data!")
+    print("Successfully built ksr_executive_dashboard.html as the main executive dashboard with 100% Live TeleCRM data!")
 
 if __name__ == '__main__':
     generate_live_dashboard()
