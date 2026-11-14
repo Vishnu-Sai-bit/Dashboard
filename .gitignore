@@ -13,6 +13,16 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Large file exceeding GitHub's 100MB single-file limit
-# (Contains raw automated activity logs; summary is fully contained in dashboard_data.json and telecrm-activities-2026-10-01_to_2026-10-31.csv)
-telecrm-activities-2026-10-01_to_2026-10-31-with-automation.csv
+# Duplicate HTML files (index.html is the single primary standalone dashboard)
+admin_dashboard.html
+ksr_executive_dashboard.html
+
+# Raw telecrm dump exports (all structured data is consolidated in dashboard_data.json)
+telecrm-activities*.csv
+telecrm-journeys*.json
+telecrm-leads*.csv
+
+# Legacy scripts
+generate_html_dashboard.py
+update_dashboard.bat
+update_dashboard.py

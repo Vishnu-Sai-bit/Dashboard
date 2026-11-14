@@ -6,7 +6,7 @@ Interactive, self-contained executive analytics portal and counselor workspace b
 
 ## Overview
 
-- **Executive Portal (`index.html` / `ksr_executive_dashboard.html` / `admin_dashboard.html`)**:
+- **Executive Portal (`index.html`)**:
   - **7 Core Views**:
     1. **Executive Dashboard**: Company-wide KPIs, Lead Funnel, Source Distribution, Counselor Calling Performance, and Revenue & Collection Velocity.
     2. **Lead Analytics**: Stage breakdown, Workable vs. Junk quality ratio, conversion rates by course, and admissions by channel.
@@ -35,29 +35,25 @@ Interactive, self-contained executive analytics portal and counselor workspace b
 
 ---
 
-## File Structure
+## Repository Files
 
 | File | Description |
 |---|---|
-| `index.html` | Primary standalone dashboard (suitable for direct opening or GitHub Pages) |
-| `ksr_executive_dashboard.html` | Executive Analytics Dashboard |
-| `admin_dashboard.html` | Admin mirror of the executive dashboard |
-| `counselor_dashboard.html` | Dedicated Counselor Workspace |
-| `dashboard_data.json` | Consolidated JSON database generated from TeleCRM raw exports |
-| `build_exact_dashboard.py` | Python build script for the Executive Dashboard |
-| `build_counselor_dashboard.py` | Python build script for the Counselor Workspace |
-| `process_telecrm_data.py` | ETL pipeline extracting raw CSVs/JSON into `dashboard_data.json` |
-| `update_dashboard.py` / `.bat` | One-click automation scripts to re-run pipeline and builders |
-| `telecrm-leads-*.csv` | Lead-level inquiry data export |
-| `telecrm-activities-*.csv` | Logged calling and interaction records |
-| `telecrm-journeys-*.json` | Timeline events per lead |
+| `index.html` | Primary standalone Executive Dashboard (ready to open in browser or deploy on GitHub Pages) |
+| `counselor_dashboard.html` | Standalone Counselor Workspace |
+| `dashboard_data.json` | Master consolidated structured database powering both dashboards |
+| `build_exact_dashboard.py` | Python build script for `index.html` |
+| `build_counselor_dashboard.py` | Python build script for `counselor_dashboard.html` |
+| `process_telecrm_data.py` | ETL pipeline extracting raw TeleCRM CSVs and journey logs into `dashboard_data.json` |
+| `README.md` | Documentation and architecture guide |
+| `.gitignore` | Ignores local caches and duplicate artifacts |
 
 ---
 
 ## How to Run & Build
 
 1. **View Dashboards Directly**:
-   Double-click `index.html` or `counselor_dashboard.html` to open in any modern web browser. All HTML files are completely standalone and self-contained with no external server required.
+   Double-click `index.html` or `counselor_dashboard.html` to open in any modern web browser. Both files are completely standalone and self-contained with no external server required.
 
 2. **Re-process Data and Rebuild**:
    ```bash
@@ -65,4 +61,3 @@ Interactive, self-contained executive analytics portal and counselor workspace b
    python build_exact_dashboard.py
    python build_counselor_dashboard.py
    ```
-   Or run `update_dashboard.bat`.
