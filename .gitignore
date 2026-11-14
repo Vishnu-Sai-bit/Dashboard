@@ -1,0 +1,18 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Scratch directory & temporary test scripts
+scratch/
+.system_generated/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large file exceeding GitHub's 100MB single-file limit
+# (Contains raw automated activity logs; summary is fully contained in dashboard_data.json and telecrm-activities-2026-10-01_to_2026-10-31.csv)
+telecrm-activities-2026-10-01_to_2026-10-31-with-automation.csv
